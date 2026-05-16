@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>PIMS Two-Article Synthesis · Form A · University of Jordan</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0D2D6B;--navy-2:#1A3F8F;--teal:#0A7E8C;--teal-2:#14A0B0;--yellow:#FFD166;
+--green:#06D6A0;--coral:#FF6B6B;--lavender:#845EC2;--bg:#F2F5FF;--card:#FFFFFF;
+--border:#D0DAF0;--text:#1A2332;--muted:#5A6B85;--shadow:0 4px 14px rgba(13,45,107,.08);}
+*{box-sizing:border-box;}html,body{margin:0;padding:0;}
+body{font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+background:radial-gradient(1200px 600px at 90% -10%,rgba(10,126,140,.08),transparent 60%),
+radial-gradient(1200px 600px at -10% 110%,rgba(255,209,102,.10),transparent 60%),var(--bg);
+color:var(--text);line-height:1.55;min-height:100vh;}
+.hidden{display:none !important;}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,var(--teal) 130%);
+color:#fff;padding:24px 32px 20px;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;
+background:linear-gradient(90deg,var(--yellow) 0%,var(--teal-2) 50%,var(--green) 100%);}
+.hero-inner{max-width:880px;margin:0 auto;position:relative;z-index:2;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);
+padding:5px 12px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
+.hero-eyebrow .dot{width:7px;height:7px;background:var(--yellow);border-radius:50%;}
+.hero h1{font-size:24px;font-weight:800;margin:10px 0 4px;font-family:'Source Serif 4',Georgia,serif;}
+.hero .subtitle{font-size:13.5px;opacity:.9;}
+.instructor-card{position:absolute;top:20px;right:32px;z-index:3;background:rgba(255,255,255,.10);
+border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:11px 15px;max-width:260px;}
+.instructor-card .name{font-weight:700;font-size:12.5px;}
+.instructor-card .role{font-size:10.5px;opacity:.85;margin-top:2px;}
+.timer-bar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:3px solid var(--teal);
+padding:10px 32px;display:flex;align-items:center;justify-content:space-between;
+box-shadow:0 2px 8px rgba(13,45,107,.07);}
+.timer-bar.warn{background:#FFF7E6;border-bottom-color:var(--yellow);}
+.timer-bar.crit{background:#FDECEC;border-bottom-color:var(--coral);}
+.timer-display{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy);}
+.timer-display .icon{width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;
+display:flex;align-items:center;justify-content:center;font-size:15px;}
+.timer-bar.crit .timer-display .icon{background:var(--coral);animation:pulse 1s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
+.progress-info{font-size:13px;color:var(--muted);font-weight:600;}
+.progress-info .answered-count{color:var(--teal);font-weight:800;}
+.container{max-width:880px;margin:28px auto;padding:0 24px;}
+.token-screen{max-width:540px;margin:50px auto;background:var(--card);border:1px solid var(--border);
+border-radius:14px;padding:34px 36px;box-shadow:var(--shadow);text-align:center;}
+.token-screen h2{font-family:'Source Serif 4',Georgia,serif;color:var(--navy);font-size:23px;margin:0 0 8px;}
+.token-screen p{color:var(--muted);font-size:14px;margin:0 0 18px;}
+.token-input{width:100%;padding:14px;font-size:20px;text-align:center;letter-spacing:4px;
+font-family:monospace;text-transform:uppercase;border:2px solid var(--border);
+border-radius:9px;background:#FAFBFE;margin-bottom:14px;}
+.token-input:focus{outline:none;border-color:var(--teal);background:#fff;}
+.token-error{background:#FDECEC;color:#B22;border-left:4px solid var(--coral);
+padding:11px 14px;border-radius:8px;font-size:13.5px;margin-bottom:14px;text-align:left;}
+.begin-info{background:#F2F5FF;border-radius:10px;padding:16px 18px;margin:16px 0;text-align:left;}
+.begin-info .row{display:flex;justify-content:space-between;font-size:13.5px;padding:4px 0;}
+.begin-info .row b{color:var(--navy);}
+.warn-box{background:#FFF7E6;border:1px solid var(--yellow);border-radius:9px;
+padding:13px 16px;font-size:13px;color:#8A6D00;text-align:left;margin:14px 0;}
+.btn{display:inline-block;padding:13px 30px;font-size:15px;font-weight:700;border:none;
+border-radius:8px;cursor:pointer;font-family:inherit;transition:transform .08s,box-shadow .12s;}
+.btn-primary{background:var(--teal);color:#fff;}
+.btn-primary:hover:not(:disabled){background:#086e7b;transform:translateY(-1px);}
+.btn-primary:disabled{background:#94B4BB;cursor:not-allowed;}
+.btn-submit{background:var(--coral);color:#fff;font-size:16px;padding:15px 38px;}
+.btn-submit:hover:not(:disabled){background:#e85555;}
+.btn-secondary{background:#fff;color:var(--navy);border:2px solid var(--border);}
+.intro{background:var(--card);border:1px solid var(--border);border-radius:14px;
+padding:24px 28px;box-shadow:var(--shadow);margin-bottom:22px;}
+.intro h2{font-family:'Source Serif 4',Georgia,serif;color:var(--navy);font-size:20px;margin:0 0 6px;}
+.intro p{font-size:14px;color:var(--text);margin:6px 0;}
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
+.rule-item{background:#F2F5FF;border-left:3px solid var(--teal);border-radius:8px;padding:10px 14px;font-size:13px;}
+.rule-item b{color:var(--navy);}
+.article-tag{display:inline-block;background:#EEF2FF;color:var(--navy);border:1px solid var(--border);
+border-radius:6px;padding:4px 10px;font-size:11.5px;font-weight:700;margin:3px 4px 3px 0;}
+.section-head{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;
+border-radius:12px;padding:14px 20px;margin:26px 0 14px;}
+.section-head h3{margin:0;font-size:16px;font-family:'Source Serif 4',Georgia,serif;}
+.section-head .meta{font-size:12px;opacity:.85;margin-top:2px;}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:12px;
+padding:20px 24px;margin-bottom:16px;box-shadow:var(--shadow);}
+.q-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.q-num{flex-shrink:0;width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;
+display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;}
+.q-num.essay{background:var(--lavender);}
+.q-num.diagram{background:#B08000;}
+.q-tag{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;
+letter-spacing:.5px;padding:3px 8px;border-radius:5px;background:#EEF2FF;color:var(--teal);}
+.q-tag.essay{background:#F0E8FB;color:var(--lavender);}
+.q-tag.diagram{background:#FFF3D6;color:#B08000;}
+.q-stem{font-size:14.5px;font-weight:600;color:var(--text);margin-top:5px;}
+.q-marks{font-size:12px;color:var(--muted);font-weight:700;margin-top:3px;}
+.options{display:flex;flex-direction:column;gap:8px;}
+.option{display:flex;align-items:flex-start;gap:12px;padding:11px 14px;border:2px solid var(--border);
+border-radius:9px;cursor:pointer;transition:border-color .12s,background .12s;background:#FAFBFE;}
+.option:hover{border-color:var(--teal-2);background:#fff;}
+.option.selected{border-color:var(--teal);background:#E9F6F7;}
+.option-letter{flex-shrink:0;width:26px;height:26px;border-radius:6px;background:#fff;
+border:2px solid var(--border);display:flex;align-items:center;justify-content:center;
+font-weight:800;font-size:13px;color:var(--navy);}
+.option.selected .option-letter{background:var(--teal);color:#fff;border-color:var(--teal);}
+.option-text{font-size:13.5px;padding-top:2px;}
+.essay-area{width:100%;min-height:150px;padding:13px 15px;font-size:14px;font-family:inherit;
+border:2px solid var(--border);border-radius:9px;background:#FAFBFE;resize:vertical;line-height:1.6;}
+.essay-area:focus{outline:none;border-color:var(--lavender);background:#fff;}
+.essay-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px;}
+.essay-meta .wc.ok{color:var(--green);font-weight:700;}
+.diagram-wrap{background:#FAFBFE;border:1px solid var(--border);border-radius:10px;
+padding:14px;margin:12px 0;}
+.diagram-caption{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:8px;text-align:center;}
+.submit-bar{text-align:center;margin:30px 0 50px;}
+.modal-backdrop{position:fixed;inset:0;background:rgba(13,45,107,.5);z-index:100;
+display:flex;align-items:center;justify-content:center;padding:24px;}
+.modal{background:#fff;border-radius:14px;padding:28px 32px;max-width:440px;text-align:center;}
+.modal h3{font-family:'Source Serif 4',Georgia,serif;color:var(--navy);margin:0 0 8px;}
+.modal p{font-size:14px;color:var(--text);}
+.modal-actions{display:flex;gap:12px;justify-content:center;margin-top:18px;}
+.done-screen{max-width:540px;margin:60px auto;background:var(--card);border:1px solid var(--border);
+border-radius:14px;padding:40px;box-shadow:var(--shadow);text-align:center;}
+.done-screen .big-check{width:70px;height:70px;border-radius:50%;background:var(--green);
+color:#fff;font-size:38px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+.done-screen h2{font-family:'Source Serif 4',Georgia,serif;color:var(--navy);}
+@media(max-width:720px){.instructor-card{display:none;}.rules-grid{grid-template-columns:1fr;}
+.hero{padding:20px;}.timer-bar{padding:10px 18px;}.container{padding:0 16px;}}
+</style>
+</head>
+<body>
+
+<!-- TOKEN GATE -->
+<div id="tokenScreen" class="token-screen">
+  <h2>Enter your access token</h2>
+  <p>The token was sent to your email after registration. It is an 8-character code and is valid for 24 hours.</p>
+  <input type="text" id="tokenInput" class="token-input" placeholder="XXXXXXXX" maxlength="12" autocomplete="off">
+  <div id="tokenError" class="token-error hidden"></div>
+  <button class="btn btn-primary" id="validateBtn">Validate token</button>
+  <p style="margin-top:18px;font-size:12px;">Form A · 16 MCQs + 2 essays · 20 marks · 60 minutes · one attempt</p>
+  <p style="margin-top:8px;font-size:12px;">No token yet? <a href="index.html" style="color:var(--teal);font-weight:700;">Register here</a></p>
+</div>
+
+<!-- BEGIN GATE -->
+<div id="beginScreen" class="token-screen hidden">
+  <h2>Ready to begin</h2>
+  <p id="beginEmailLine"></p>
+  <div class="begin-info">
+    <div class="row"><span>Form</span><b>A</b></div>
+    <div class="row"><span>Questions</span><b>16 MCQs + 2 essays</b></div>
+    <div class="row"><span>Total marks</span><b>20 (16 + 4)</b></div>
+    <div class="row"><span>Time allowed</span><b>60 minutes</b></div>
+    <div class="row"><span>Attempts</span><b>One only</b></div>
+  </div>
+  <div class="warn-box">
+    <b>Important:</b> the 60-minute timer starts the moment you click <b>Begin assessment</b>.
+    It cannot be paused. When the timer reaches zero the assignment submits automatically.
+    Make sure you have both articles open and a stable connection before you begin.
+  </div>
+  <button class="btn btn-primary" id="beginBtn">Begin assessment</button>
+</div>
+
+<!-- ASSESSMENT -->
+<div id="assessment" class="hidden">
+  <div class="hero">
+    <div class="instructor-card">
+      <div class="name">Dr. Samar J. Melhem</div>
+      <div class="role">Assistant Professor of Digital Health<br>School of Pharmacy · University of Jordan<br>Office 225 · sa.melhem@ju.edu.jo</div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow"><span class="dot"></span> PIMS · M.Pharm Pharmacy Administration</div>
+      <h1>Two-Article Synthesis Assignment — Form A</h1>
+      <div class="subtitle">Open-book · 16 MCQs (16 marks) + 2 essays (4 marks) = 20 marks</div>
+    </div>
+  </div>
+
+  <div class="timer-bar">
+    <div class="timer-display">
+      <div class="icon">&#9201;</div>
+      <span id="timerText">60:00</span>
+    </div>
+    <div class="progress-info">
+      <span class="answered-count" id="answeredCount">0</span> / 16 MCQs answered
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="intro">
+      <h2>Instructions</h2>
+      <p>This open-book assignment is based on two articles by Melhem et&nbsp;al.:</p>
+      <p>
+        <span class="article-tag">Article 1 · Melhem et al. 2024 · Digital Health · DOI 10.1177/20552076241237668</span>
+        <span class="article-tag">Article 2 · Melhem et al. 2025 · Frontiers in Public Health — Digital Public Health · DOI 10.3389/fpubh.2025.1617857</span>
+      </p>
+      <div class="rules-grid">
+        <div class="rule-item"><b>Part 1 — MCQs:</b> 16 questions, 1 mark each. Choose one option (A–E).</div>
+        <div class="rule-item"><b>Part 2 — Essays:</b> 2 questions, 2 marks each. 120–180 words each.</div>
+        <div class="rule-item"><b>Timer:</b> 60 minutes from when you began. Auto-submits at zero.</div>
+        <div class="rule-item"><b>Saving:</b> answers autosave every 30 seconds; final submission is on the Submit button.</div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h3>Part 1 — Multiple Choice Questions</h3>
+      <div class="meta">16 questions · 1 mark each · 16 marks</div>
+    </div>
+    
+    <div class="q-card" id="card-q1">
+      <div class="q-head">
+        <div class="q-num ">1</div>
+        <div>
+          <span class="q-tag ">METHOD · SAMPLING</span>
+          <div class="q-stem">In Article 1, what sampling strategy was used in stage 1 of recruitment, and what specific outcome did the authors report at the close of that stage?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q1" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Purposive sampling — one consultant oncologist declined to participate</div>
+        </div>
+        <div class="option" data-q="q1" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Convenience sampling — one nurse withdrew citing time constraints</div>
+        </div>
+        <div class="option" data-q="q1" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Theoretical sampling — saturation reached after nineteen interviews</div>
+        </div>
+        <div class="option" data-q="q1" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Quota sampling — one pharmacist did not return the participant sheet</div>
+        </div>
+        <div class="option" data-q="q1" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Snowball sampling — two participants were unreachable for follow-up</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q2">
+      <div class="q-head">
+        <div class="q-num ">2</div>
+        <div>
+          <span class="q-tag ">COREQ · TRANSLATION</span>
+          <div class="q-stem">Which translation/verification procedure did Article 1 actually report?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q2" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Forward and back-translation by two certified medical translators with reconciliation</div>
+        </div>
+        <div class="option" data-q="q2" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Bilingual transcription with simultaneous parallel coding in Arabic and English</div>
+        </div>
+        <div class="option" data-q="q2" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Translation outsourced to a Kingston University language services unit with kappa 0.86</div>
+        </div>
+        <div class="option" data-q="q2" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Translation by SJM only with no formal second-reviewer step reported in the paper</div>
+        </div>
+        <div class="option" data-q="q2" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Verbatim Arabic transcription, English translation by SJM, subset reviewed by SNG and RK</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q3">
+      <div class="q-head">
+        <div class="q-num ">3</div>
+        <div>
+          <span class="q-tag ">CRITICAL · PARADOX</span>
+          <div class="q-stem">HCP1 and HCP2 in Article 1 describe a paradox in Jordan&#x27;s cancer-care model. Which formulation best captures it?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q3" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Decentralisation succeeded in primary care but failed at the tertiary specialist level entirely</div>
+        </div>
+        <div class="option" data-q="q3" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">KHCC absorbs public-sector overflow while the private sector absorbs KHCC referral excess in turn</div>
+        </div>
+        <div class="option" data-q="q3" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Private insurers decentralised cancer financing while the Ministry of Health centralised cancer-care delivery nationally</div>
+        </div>
+        <div class="option" data-q="q3" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Family-medicine integration decentralised follow-up away from already overburdened tertiary specialist centres</div>
+        </div>
+        <div class="option" data-q="q3" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Centralised tertiary care intended to consolidate specialists generates the fragmented multi-institutional journeys it sought to prevent</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q4">
+      <div class="q-head">
+        <div class="q-num ">4</div>
+        <div>
+          <span class="q-tag ">CONCEPT · WASTA</span>
+          <div class="q-stem">In HCP12&#x27;s account in Article 1, wasta operates as:</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q4" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">A formal triage criterion encoded in the Ministry of Health referral algorithm</div>
+        </div>
+        <div class="option" data-q="q4" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">An informal mechanism speeding private-to-public transfer when patient funds run out</div>
+        </div>
+        <div class="option" data-q="q4" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">A digital identifier used by Hakeem to authenticate cross-sector patient transfers</div>
+        </div>
+        <div class="option" data-q="q4" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">A reimbursement waiver granted by the Royal Court for cancer patients in need</div>
+        </div>
+        <div class="option" data-q="q4" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">A government-issued priority code embedded in the national civil identity number</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q5">
+      <div class="q-head">
+        <div class="q-num ">5</div>
+        <div>
+          <span class="q-tag ">STRUCTURE · THEME 2</span>
+          <div class="q-stem">Theme 2 of Article 1 bundles which three operational ideas under &quot;Digital health assisted reforms&quot;?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q5" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Tele-ICU expansion; mHealth wearables for survivorship; blockchain audit trails for procurement workflows</div>
+        </div>
+        <div class="option" data-q="q5" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Decentralisation/patient-centric models; healthcare system navigation; medical communications and health promotion</div>
+        </div>
+        <div class="option" data-q="q5" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">AI triage of new referrals; national genomic registries; robotic surgery scheduling platforms across sectors</div>
+        </div>
+        <div class="option" data-q="q5" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">National screening uptake drives; family-medicine training programmes; insurance digitisation reforms nationally</div>
+        </div>
+        <div class="option" data-q="q5" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Hospital-at-home pilots; remote vital-signs monitoring; predictive readmission risk modelling for oncology</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q6">
+      <div class="q-head">
+        <div class="q-num ">6</div>
+        <div>
+          <span class="q-tag ">DEMOGRAPHICS</span>
+          <div class="q-stem">Which demographic combination is consistent with Article 1, Table 1?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q6" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">N=24; nine consultant oncologists; median age 38; experience 11 years; Amman only</div>
+        </div>
+        <div class="option" data-q="q6" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">N=22; twelve consultant oncologists; median age 47; experience 10 years; Amman and Irbid</div>
+        </div>
+        <div class="option" data-q="q6" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">N=20; nine consultant oncologists; median age 42; range 29-69; Amman and Zarqa</div>
+        </div>
+        <div class="option" data-q="q6" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">N=22; nine consultant oncologists; mean age 42; experience 13 years; Amman and Aqaba</div>
+        </div>
+        <div class="option" data-q="q6" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">N=22; nine consultant oncologists; median age 42; experience 13 years; Amman-based sample</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q7">
+      <div class="q-head">
+        <div class="q-num ">7</div>
+        <div>
+          <span class="q-tag ">CASE SCENARIO</span>
+          <div class="q-stem">A 58-year-old colorectal-cancer survivor in Mafraq, registered at a public-sector hospital in Amman, must travel 90 km monthly only for prescription renewal and lab results because her file is not visible at any closer facility. Which structural feature directly produces this scenario, and which Theme-2 reform addresses it?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q7" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Lack of family-medicine training across regions; reform: oncology-fellowship expansion programme</div>
+        </div>
+        <div class="option" data-q="q7" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">High antineoplastic medication cost barriers; reform: bulk procurement coordinated via the WHO</div>
+        </div>
+        <div class="option" data-q="q7" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">No inter-organisational data exchange across sectors; reform: comprehensive e-health portal leveraging the national ID</div>
+        </div>
+        <div class="option" data-q="q7" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">High population smoking prevalence rate; reform: nationwide non-communicable disease screening campaigns</div>
+        </div>
+        <div class="option" data-q="q7" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Health insurance market fragmentation; reform: a single-payer cancer-care financing pool nationally</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q8">
+      <div class="q-head">
+        <div class="q-num ">8</div>
+        <div>
+          <span class="q-tag ">REGIONAL ROLE</span>
+          <div class="q-stem">HCP3 in Article 1 identifies a regional use-case for &quot;virtual clinics or safe digital channels&quot;. The use-case is:</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q8" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Keeping connected with patients who travel to Jordan from nearby countries for treatment</div>
+        </div>
+        <div class="option" data-q="q8" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Coordinating chemotherapy regimens with Syrian refugee camps via the UNHCR partnership</div>
+        </div>
+        <div class="option" data-q="q8" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Running joint tumour board meetings with Israeli academic medical centres regularly</div>
+        </div>
+        <div class="option" data-q="q8" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Sending tissue pathology slides to a US reference laboratory for second opinion</div>
+        </div>
+        <div class="option" data-q="q8" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Holding Gulf-wide multidisciplinary case conferences on a quarterly rotating basis</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q9">
+      <div class="q-head">
+        <div class="q-num ">9</div>
+        <div>
+          <span class="q-tag ">METHOD · ANALYTIC</span>
+          <div class="q-stem">Which analytic method and epistemological position anchored coding in Article 2?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q9" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Constant-comparison grounded theory within a constructivist research paradigm</div>
+        </div>
+        <div class="option" data-q="q9" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Discourse analysis within a post-structuralist linguistic analytic paradigm</div>
+        </div>
+        <div class="option" data-q="q9" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Interpretative phenomenological analysis within a hermeneutic interpretive paradigm</div>
+        </div>
+        <div class="option" data-q="q9" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Gale et al.&#x27;s hybrid inductive-deductive Framework Method within critical-realist epistemology</div>
+        </div>
+        <div class="option" data-q="q9" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Braun and Clarke&#x27;s reflexive thematic analysis within a relativist paradigm</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q10">
+      <div class="q-head">
+        <div class="q-num ">10</div>
+        <div>
+          <span class="q-tag ">STRUCTURE · 6 DOMAINS</span>
+          <div class="q-stem">Which list reproduces Article 2&#x27;s six a priori subthemes exactly in the order presented?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q10" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Innovation; Patients; Healthcare professionals; Organizational; Social; Economic and political</div>
+        </div>
+        <div class="option" data-q="q10" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Patients; HCPs; Innovation; Economic; Social context; Organisational context factors</div>
+        </div>
+        <div class="option" data-q="q10" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Technology; Workforce; Culture; Finance; National politics; Regional geographic context</div>
+        </div>
+        <div class="option" data-q="q10" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Macro-level; Meso-level; Micro-level; Patient; Provider; Payer factors combined</div>
+        </div>
+        <div class="option" data-q="q10" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Provider; Patient; Payer; Policy; Process; Platform infrastructure factors involved</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q11">
+      <div class="q-head">
+        <div class="q-num ">11</div>
+        <div>
+          <span class="q-tag ">PROGRAMME · HAKEEM</span>
+          <div class="q-stem">Which combination is fully consistent with Article 2&#x27;s description of the Hakeem Program?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q11" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Initiated 2009; managed jointly by WHO and UNICEF programmes; fully interoperable with the private sector</div>
+        </div>
+        <div class="option" data-q="q11" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Initiated 2015; managed by the Royal Medical Services; full public-sector coverage achieved; 80% comprehensive EHR uptake</div>
+        </div>
+        <div class="option" data-q="q11" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Initiated 2003; for-profit subsidiary of a Saudi technology consortium; covers KHCC patients only nationally</div>
+        </div>
+        <div class="option" data-q="q11" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Initiated 2009; managed by Electronic Health Solutions (non-profit); under 25% primary-care EHR; 10.3% comprehensive EHR</div>
+        </div>
+        <div class="option" data-q="q11" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Initiated 2012; managed by the Higher Health Council; 60% primary-care EHR coverage achieved nationally</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q12">
+      <div class="q-head">
+        <div class="q-num ">12</div>
+        <div>
+          <span class="q-tag ">QUOTE ATTRIBUTION</span>
+          <div class="q-stem">The quote about &quot;data encryption and security&quot; and &quot;I&#x27;m not convinced about IT preparedness&quot; belongs in Article 2 to:</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q12" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">HCP13, oncology pharmacist, private sector, female, 33 years</div>
+        </div>
+        <div class="option" data-q="q12" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">HCP10, senior fellow oncologist, KHCC, male, 40 years</div>
+        </div>
+        <div class="option" data-q="q12" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">HCP1, surgical oncologist, university hospital director, semi-governmental, male, 69 years</div>
+        </div>
+        <div class="option" data-q="q12" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">HCP15, clinical nurse specialist, KHCC, female, 37 years</div>
+        </div>
+        <div class="option" data-q="q12" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">HCP8, surgical oncologist, KHCC, male, 51 years</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q13">
+      <div class="q-head">
+        <div class="q-num ">13</div>
+        <div>
+          <span class="q-tag ">PATIENT DOMAIN</span>
+          <div class="q-stem">Which scenario does HCP2 describe in Article 2 as a culturally specific Patient-domain barrier?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q13" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">Patients refusing chemotherapy regimens because of dietary restrictions during the month of Ramadan</div>
+        </div>
+        <div class="option" data-q="q13" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">Patients insisting on a male oncologist for cultural reasons across all clinical interactions</div>
+        </div>
+        <div class="option" data-q="q13" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">Patients refusing telemedicine consultations over privacy concerns about female imaging being recorded</div>
+        </div>
+        <div class="option" data-q="q13" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">Families withholding diagnosis from an elderly patient and reacting with anger and violence when challenged</div>
+        </div>
+        <div class="option" data-q="q13" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">Patients refusing palliative referrals owing to fatalistic beliefs about prognosis and end-of-life care</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q14">
+      <div class="q-head">
+        <div class="q-num ">14</div>
+        <div>
+          <span class="q-tag ">SOCIAL · WASTA</span>
+          <div class="q-stem">How does Article 2 actually treat wasta within the Social-context subtheme?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q14" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">A formally regulated referral mechanism that should be digitised and audited via the platform</div>
+        </div>
+        <div class="option" data-q="q14" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">An informal practice using social influence to navigate barriers, mitigated by transparent triage and audit trails</div>
+        </div>
+        <div class="option" data-q="q14" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">A religious obligation that protects vulnerable patients and should remain outside platform governance entirely</div>
+        </div>
+        <div class="option" data-q="q14" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">A synonym for medical tourism within the Middle-East region as treated in the global literature</div>
+        </div>
+        <div class="option" data-q="q14" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">A culturally tolerated form of in-kind payment to clinicians, particularly in the private sector</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q15">
+      <div class="q-head">
+        <div class="q-num ">15</div>
+        <div>
+          <span class="q-tag ">POLICY · STRATEGY</span>
+          <div class="q-stem">What does HCP1 in Article 2 claim about Jordan&#x27;s national digital-health strategy?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      
+      <div class="options">
+        <div class="option" data-q="q15" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">It is aligned with the WHO Global Strategy on Digital Health 2020 to 2025</div>
+        </div>
+        <div class="option" data-q="q15" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">It is currently led by the World Bank and renewed every five years cycle</div>
+        </div>
+        <div class="option" data-q="q15" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">It is restricted in scope to KHCC and the Royal Medical Services only</div>
+        </div>
+        <div class="option" data-q="q15" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">There is no overarching national digital-health strategy directing transformation today</div>
+        </div>
+        <div class="option" data-q="q15" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">It is jointly governed by the Ministry of Health and the Jordan Medical Association</div>
+        </div>
+      </div>
+    </div>
+    <div class="q-card" id="card-q16">
+      <div class="q-head">
+        <div class="q-num diagram">16</div>
+        <div>
+          <span class="q-tag diagram">DIAGRAM · GAP-FILL</span>
+          <div class="q-stem">The diagram below shows the structural gap that BOTH articles identify as the root of fragmented cancer journeys in Jordan. Each box is a sector with siloed records; the patient figure carries paper records between them; the cloud labelled &quot;?&quot; is the missing data layer. Which technology element BEST fills the &quot;?&quot; gap, per Article 1&#x27;s Theme-2 reform AND Article 2&#x27;s Innovation subtheme?</div>
+          <div class="q-marks">1 mark</div>
+        </div>
+      </div>
+      <div class="diagram-wrap"><svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jordan healthcare sectors with a missing data layer">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#FFD166" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <!-- Title -->
+  <text x="360" y="22" text-anchor="middle" font-family="Nunito, sans-serif" font-size="13" font-weight="700" fill="#0D2D6B">Jordan's four-sector cancer-care landscape — and the missing layer</text>
+
+  <!-- Four sector boxes -->
+  <!-- KHCC -->
+  <rect x="40" y="60" width="130" height="62" rx="8" fill="#FFFFFF" stroke="#0D2D6B" stroke-width="2"/>
+  <text x="105" y="85" text-anchor="middle" font-family="Nunito" font-size="13" font-weight="700" fill="#0D2D6B">KHCC</text>
+  <text x="105" y="103" text-anchor="middle" font-family="Nunito" font-size="10.5" fill="#5A6B85">cancer centre</text>
+  <text x="105" y="116" text-anchor="middle" font-family="Nunito" font-size="9" fill="#5A6B85" font-style="italic">siloed EHR</text>
+
+  <!-- MoH hospital -->
+  <rect x="195" y="60" width="130" height="62" rx="8" fill="#FFFFFF" stroke="#0A7E8C" stroke-width="2"/>
+  <text x="260" y="85" text-anchor="middle" font-family="Nunito" font-size="13" font-weight="700" fill="#0A7E8C">MoH hospital</text>
+  <text x="260" y="103" text-anchor="middle" font-family="Nunito" font-size="10.5" fill="#5A6B85">public sector</text>
+  <text x="260" y="116" text-anchor="middle" font-family="Nunito" font-size="9" fill="#5A6B85" font-style="italic">Hakeem (partial)</text>
+
+  <!-- University hospital -->
+  <rect x="395" y="60" width="130" height="62" rx="8" fill="#FFFFFF" stroke="#845EC2" stroke-width="2"/>
+  <text x="460" y="85" text-anchor="middle" font-family="Nunito" font-size="13" font-weight="700" fill="#845EC2">University hosp.</text>
+  <text x="460" y="103" text-anchor="middle" font-family="Nunito" font-size="10.5" fill="#5A6B85">semi-government</text>
+  <text x="460" y="116" text-anchor="middle" font-family="Nunito" font-size="9" fill="#5A6B85" font-style="italic">own EHR</text>
+
+  <!-- Private hospital -->
+  <rect x="550" y="60" width="130" height="62" rx="8" fill="#FFFFFF" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="615" y="85" text-anchor="middle" font-family="Nunito" font-size="13" font-weight="700" fill="#FF6B6B">Private hosp.</text>
+  <text x="615" y="103" text-anchor="middle" font-family="Nunito" font-size="10.5" fill="#5A6B85">private sector</text>
+  <text x="615" y="116" text-anchor="middle" font-family="Nunito" font-size="9" fill="#5A6B85" font-style="italic">no shared id</text>
+
+  <!-- The missing data layer (cloud with ? ) -->
+  <ellipse cx="360" cy="195" rx="170" ry="42" fill="url(#hatch)" stroke="#0D2D6B" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="360" y="190" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-size="38" font-weight="700" fill="#0D2D6B">?</text>
+  <text x="360" y="218" text-anchor="middle" font-family="Nunito" font-size="11" font-weight="600" fill="#0D2D6B">missing shared / longitudinal data layer</text>
+
+  <!-- Lines from each sector down to the missing layer -->
+  <line x1="105" y1="122" x2="220" y2="170" stroke="#B5C0D5" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="260" y1="122" x2="320" y2="160" stroke="#B5C0D5" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="460" y1="122" x2="400" y2="160" stroke="#B5C0D5" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="615" y1="122" x2="500" y2="170" stroke="#B5C0D5" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Patient figure carrying paper -->
+  <g transform="translate(340,260)">
+    <circle cx="20" cy="6" r="8" fill="#FFD166" stroke="#0D2D6B" stroke-width="1.5"/>
+    <line x1="20" y1="14" x2="20" y2="38" stroke="#0D2D6B" stroke-width="2"/>
+    <line x1="20" y1="20" x2="8" y2="32" stroke="#0D2D6B" stroke-width="2"/>
+    <line x1="20" y1="20" x2="34" y2="30" stroke="#0D2D6B" stroke-width="2"/>
+    <line x1="20" y1="38" x2="12" y2="52" stroke="#0D2D6B" stroke-width="2"/>
+    <line x1="20" y1="38" x2="28" y2="52" stroke="#0D2D6B" stroke-width="2"/>
+    <!-- paper records -->
+    <rect x="36" y="22" width="14" height="18" fill="#fff" stroke="#0D2D6B" stroke-width="1.5"/>
+    <line x1="38" y1="26" x2="48" y2="26" stroke="#5A6B85" stroke-width="1"/>
+    <line x1="38" y1="30" x2="48" y2="30" stroke="#5A6B85" stroke-width="1"/>
+    <line x1="38" y1="34" x2="46" y2="34" stroke="#5A6B85" stroke-width="1"/>
+  </g>
+  <text x="360" y="312" text-anchor="middle" font-family="Nunito" font-size="10" fill="#5A6B85" font-style="italic">patient physically carries paper records between sectors</text>
+</svg>
+<div class="diagram-caption">Figure: Synthesis based on Article 1 (Theme 1: Structural healthcare challenges) and Article 2 (Innovation subtheme).</div></div>
+      <div class="options">
+        <div class="option" data-q="q16" data-letter="A" onclick="selectOption(this)">
+          <div class="option-letter">A</div>
+          <div class="option-text">A surgical-robotics network coordinated across the four sectors with a shared scheduling layer</div>
+        </div>
+        <div class="option" data-q="q16" data-letter="B" onclick="selectOption(this)">
+          <div class="option-letter">B</div>
+          <div class="option-text">A KHCC-managed WhatsApp business account for inter-hospital referral messaging across all sectors</div>
+        </div>
+        <div class="option" data-q="q16" data-letter="C" onclick="selectOption(this)">
+          <div class="option-letter">C</div>
+          <div class="option-text">An open-standards national e-health portal leveraging the national ID, federating cross-sector records and embedding tele-oncology</div>
+        </div>
+        <div class="option" data-q="q16" data-letter="D" onclick="selectOption(this)">
+          <div class="option-letter">D</div>
+          <div class="option-text">A distributed ledger or private blockchain run independently by each of the four sectors</div>
+        </div>
+        <div class="option" data-q="q16" data-letter="E" onclick="selectOption(this)">
+          <div class="option-letter">E</div>
+          <div class="option-text">AI-powered chatbots installed at each sector&#x27;s patient kiosks to bridge the records gap directly</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h3>Part 2 — Essay Questions</h3>
+      <div class="meta">2 questions · 2 marks each · 4 marks · marked manually by the instructor</div>
+    </div>
+    
+    <div class="q-card" id="card-e1">
+      <div class="q-head">
+        <div class="q-num essay">E1</div>
+        <div>
+          <span class="q-tag essay">Essay · 2 marks</span>
+          <div class="q-stem">Article 1 frames Jordan&#x27;s cancer-care system around a &quot;centralisation paradox&quot; (HCP1, HCP2). In 120–180 words, explain this paradox and argue how ONE specific Theme-2 digital-health reform could resolve it. Ground your answer in concrete detail from the paper (e.g. KHCC capacity figures, the referral-pathway problem, or the national-ID portal concept).</div>
+          <div class="q-marks">2 marks · 120–180 words</div>
+        </div>
+      </div>
+      <textarea class="essay-area" id="essay1" data-essay="e1"
+        placeholder="Type your answer here (120–180 words)…" oninput="updateEssayMeta(1)"></textarea>
+      <div class="essay-meta">
+        <span id="wc1" class="wc">0 words</span>
+        <span>Marked manually by the instructor</span>
+      </div>
+    </div>
+    <div class="q-card" id="card-e2">
+      <div class="q-head">
+        <div class="q-num essay">E2</div>
+        <div>
+          <span class="q-tag essay">Essay · 2 marks</span>
+          <div class="q-stem">Both articles repeatedly raise wasta and family-mediated decision-making as cultural features of Jordanian cancer care. In 120–180 words, discuss how a digital-health platform should be DESIGNED to remain effective in this cultural context without simply ignoring or &quot;digitising&quot; these informal practices. Reference at least one specific participant account.</div>
+          <div class="q-marks">2 marks · 120–180 words</div>
+        </div>
+      </div>
+      <textarea class="essay-area" id="essay2" data-essay="e2"
+        placeholder="Type your answer here (120–180 words)…" oninput="updateEssayMeta(2)"></textarea>
+      <div class="essay-meta">
+        <span id="wc2" class="wc">0 words</span>
+        <span>Marked manually by the instructor</span>
+      </div>
+    </div>
+
+    <div class="submit-bar">
+      <button class="btn btn-submit" id="submitBtn">Submit final responses</button>
+      <p style="font-size:12px;color:var(--muted);margin-top:10px;">Once submitted, the assignment cannot be reopened.</p>
+    </div>
+  </div>
+</div>
+
+<!-- DONE -->
+<div id="doneScreen" class="done-screen hidden">
+  <div class="big-check">&#10003;</div>
+  <h2>Submission received</h2>
+  <p id="doneMsg">Your responses have been recorded. A confirmation email has been sent to you.</p>
+  <p style="font-size:13px;color:var(--muted);">Your MCQ score is graded automatically. Your two essays will be
+  marked by Dr. Samar Melhem. Final grades and feedback will be emailed to you on 18 May 2026.</p>
+</div>
+
+<!-- SUBMIT CONFIRM MODAL -->
+<div id="confirmModal" class="modal-backdrop hidden">
+  <div class="modal">
+    <h3>Submit your responses?</h3>
+    <p id="confirmMsg">You are about to submit. This action is final and cannot be undone.</p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" id="cancelSubmit">Keep working</button>
+      <button class="btn btn-submit" id="confirmSubmit">Submit now</button>
+    </div>
+  </div>
+</div>
+
+<!-- TIME-UP MODAL -->
+<div id="timeUpModal" class="modal-backdrop hidden">
+  <div class="modal">
+    <h3>Time is up</h3>
+    <p>Your 60 minutes have elapsed. Your responses are being submitted automatically.</p>
+  </div>
+</div>
+
+<script>
+const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbzNSWumIZi_0N4MUS92iFgdgg5IGGNNiaPPtaw8XtXzP-82wkfMwPBLni8JmjMM4UZURg/exec';
+const FORM_ID = 'A';
+const TOTAL_MCQ = 16;
+
+const $ = (id) => document.getElementById(id);
+function show(id){ $(id).classList.remove('hidden'); }
+function hide(id){ $(id).classList.add('hidden'); }
+
+let TOKEN = '';
+let STUDENT_EMAIL = '';
+let DEADLINE = null;
+let timerInterval = null;
+let autosaveInterval = null;
+let SUBMITTED = false;
+const answers = {};      // q1..q16 -> letter
+const essays = { e1:'', e2:'' };
+
+// ---- token from URL ----
+const urlToken = new URLSearchParams(window.location.search).get('token');
+if (urlToken) $('tokenInput').value = urlToken.toUpperCase();
+
+// ---- backend helpers ----
+async function backendGet(params){
+  const qs = Object.keys(params).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(params[k])).join('&');
+  const r = await fetch(BACKEND_URL+'?'+qs, { method:'GET' });
+  return await r.json();
+}
+async function backendPost(body){
+  const r = await fetch(BACKEND_URL, {
+    method:'POST',
+    headers:{ 'Content-Type':'text/plain;charset=utf-8' },
+    body: JSON.stringify(body)
+  });
+  return await r.json();
+}
+
+// ---- validate ----
+async function validateToken(){
+  const t = $('tokenInput').value.trim().toUpperCase();
+  if (!t){ setError('Please enter your token.'); return; }
+  $('validateBtn').disabled = true;
+  $('validateBtn').textContent = 'Checking…';
+  hide('tokenError');
+  try {
+    const resp = await backendGet({ action:'validate', token:t, form:FORM_ID });
+    if (!resp.ok){
+      setError(resp.error || 'Invalid token.');
+      $('validateBtn').disabled = false;
+      $('validateBtn').textContent = 'Validate token';
+      return;
+    }
+    TOKEN = t;
+    STUDENT_EMAIL = resp.email;
+    const nameLine = resp.name ? ('<b>'+resp.name+'</b> · ') : '';
+    $('beginEmailLine').innerHTML = nameLine + 'Signed in as <b>'+resp.email+'</b> · Form <b>'+resp.form+'</b>';
+    hide('tokenScreen');
+    show('beginScreen');
+  } catch(err) {
+    setError('Network error. Please check your connection and try again.');
+    $('validateBtn').disabled = false;
+    $('validateBtn').textContent = 'Validate token';
+  }
+}
+function setError(msg){
+  const e = $('tokenError');
+  e.textContent = msg;
+  e.classList.remove('hidden');
+}
+
+// ---- begin ----
+async function beginAssessment(){
+  $('beginBtn').disabled = true;
+  $('beginBtn').textContent = 'Starting…';
+  try {
+    const resp = await backendGet({ action:'start', token:TOKEN });
+    if (!resp.ok){
+      alert(resp.error || 'Could not start the assessment.');
+      $('beginBtn').disabled = false;
+      $('beginBtn').textContent = 'Begin assessment';
+      return;
+    }
+    DEADLINE = new Date(resp.deadline_iso).getTime();
+    hide('beginScreen');
+    show('assessment');
+    startTimer();
+    autosaveInterval = setInterval(doAutosave, 30000);
+    window.addEventListener('beforeunload', (e)=>{
+      if (!SUBMITTED){ e.preventDefault(); e.returnValue=''; }
+    });
+  } catch(err) {
+    alert('Network error starting the assessment. Please try again.');
+    $('beginBtn').disabled = false;
+    $('beginBtn').textContent = 'Begin assessment';
+  }
+}
+
+// ---- timer ----
+function startTimer(){
+  updateTimer();
+  timerInterval = setInterval(updateTimer, 1000);
+}
+function updateTimer(){
+  const remaining = Math.max(0, Math.floor((DEADLINE - Date.now())/1000));
+  const m = Math.floor(remaining/60);
+  const s = remaining % 60;
+  $('timerText').textContent = (m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  const bar = document.querySelector('.timer-bar');
+  bar.classList.toggle('warn', remaining<=600 && remaining>60);
+  bar.classList.toggle('crit', remaining<=60);
+  if (remaining<=0){
+    clearInterval(timerInterval);
+    autoSubmit();
+  }
+}
+
+// ---- option select ----
+function selectOption(el){
+  const q = el.dataset.q;
+  document.querySelectorAll('.option[data-q="'+q+'"]').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[q] = el.dataset.letter;
+  updateAnsweredCount();
+}
+function updateAnsweredCount(){
+  $('answeredCount').textContent = Object.keys(answers).length;
+}
+
+// ---- essay word count ----
+function updateEssayMeta(idx){
+  const ta = $('essay'+idx);
+  essays['e'+idx] = ta.value;
+  const words = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+  const wc = $('wc'+idx);
+  wc.textContent = words + ' words';
+  wc.className = 'wc' + ((words>=120 && words<=180) ? ' ok' : '');
+}
+
+// ---- autosave ----
+async function doAutosave(){
+  if (SUBMITTED) return;
+  try {
+    await backendPost({ action:'autosave', token:TOKEN, form:FORM_ID,
+      answers:answers, essays:essays });
+  } catch(e) { /* silent */ }
+}
+
+// ---- submit ----
+function openConfirm(){
+  const answered = Object.keys(answers).length;
+  let msg = 'You are about to submit. This action is final.';
+  if (answered < TOTAL_MCQ){
+    msg = 'You have answered '+answered+' of '+TOTAL_MCQ+' MCQs. Unanswered questions score zero. Submit anyway?';
+  }
+  $('confirmMsg').textContent = msg;
+  show('confirmModal');
+}
+async function doSubmit(){
+  if (SUBMITTED) return;
+  SUBMITTED = true;
+  hide('confirmModal');
+  clearInterval(timerInterval);
+  clearInterval(autosaveInterval);
+  try {
+    const resp = await backendPost({ action:'submit', token:TOKEN, form:FORM_ID,
+      answers:answers, essays:essays });
+    hide('assessment');
+    show('doneScreen');
+    if (resp.message) $('doneMsg').textContent = resp.message;
+  } catch(err) {
+    SUBMITTED = false;
+    alert('Network error during submission. Please try again.');
+  }
+}
+function autoSubmit(){
+  show('timeUpModal');
+  setTimeout(()=>{ hide('timeUpModal'); doSubmit(); }, 2500);
+}
+
+// ---- wire up ----
+document.addEventListener('DOMContentLoaded', ()=>{
+  $('validateBtn').addEventListener('click', validateToken);
+  $('tokenInput').addEventListener('keydown', e=>{ if(e.key==='Enter') validateToken(); });
+  $('beginBtn').addEventListener('click', beginAssessment);
+  $('submitBtn').addEventListener('click', openConfirm);
+  $('cancelSubmit').addEventListener('click', ()=>hide('confirmModal'));
+  $('confirmSubmit').addEventListener('click', doSubmit);
+});
+</script>
+</body>
+</html>
